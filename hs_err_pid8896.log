@@ -1,0 +1,198 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff97124c4f3, pid=8896, tid=10064
+#
+# JRE version:  (11.0.21+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.21+9-LTS-193, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x1dc4f3]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dclassworlds.conf=C:\Program Files\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin\m2.conf -Dmaven.home=C:\Program Files\apache-maven-3.9.6-bin\apache-maven-3.9.6 -Dlibrary.jansi.path=C:\Program Files\apache-maven-3.9.6-bin\apache-maven-3.9.6\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\sonali\eclipse-workspace\BDDCucumberFramework org.codehaus.plexus.classworlds.launcher.Launcher clean
+
+Host: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, 8 cores, 31G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3085)
+Time: Wed Mar  6 11:14:28 2024 India Standard Time elapsed time: 0.026799 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000027e7ac14800):  JavaThread "Unknown thread" [_thread_in_vm, id=10064, stack(0x00000083a0900000,0x00000083a0a00000)]
+
+Stack: [0x00000083a0900000,0x00000083a0a00000],  sp=0x00000083a09fe950,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1dc4f3]
+V  [jvm.dll+0x1da743]
+V  [jvm.dll+0x36d49b]
+V  [jvm.dll+0x76106f]
+V  [jvm.dll+0x3df587]
+V  [jvm.dll+0x3e1631]
+C  [jli.dll+0x52e7]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa58]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000bf4f9938714e, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x0000000000000000
+RSP=0x00000083a09fe950, RBP=0x0000000000000000, RSI=0x0000027e7ac14800, RDI=0x0000000000000000
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x00000083a09fe710
+R12=0x0000000000000000, R13=0x00007ff97167b030, R14=0x00000083a09ff668, R15=0x0000000000000008
+RIP=0x00007ff97124c4f3, EFLAGS=0x0000000000010256
+
+Top of Stack: (sp=0x00000083a09fe950)
+0x00000083a09fe950:   0000027e7912bac0 00007ff9fa292990
+0x00000083a09fe960:   0000000000000008 00000083a09ff668
+0x00000083a09fe970:   0000000000000000 0000000000000400
+0x00000083a09fe980:   000065636cc10ef9 00007ff97167b030
+0x00000083a09fe990:   00000083a09fee70 00000083a09ff668
+0x00000083a09fe9a0:   00007ff97167b030 0000000000000000
+0x00000083a09fe9b0:   0000000000000008 0000000000000000
+0x00000083a09fe9c0:   00007ff9e0f90000 00007ff9718faa20
+0x00000083a09fe9d0:   00007ff97124a5ea 00007ff9fa2c234c
+0x00000083a09fe9e0:   0000000000000000 00007ff9716f7213
+0x00000083a09fe9f0:   0000bf4f9938714e 00007ff97167b030
+0x00000083a09fea00:   0000000000000000 00007ff97167b030
+0x00000083a09fea10:   0000027e7ac14800 00000083a09feb30
+0x00000083a09fea20:   0000027e79126240 00007ff97124a743
+0x00000083a09fea30:   00007ff9df980000 00007ff9e0f9d250
+0x00000083a09fea40:   00000083a09feb30 0000027e7ac14800 
+
+Instructions: (pc=0x00007ff97124c4f3)
+0x00007ff97124c4d3:   00 48 33 c4 48 89 84 24 a0 00 00 00 48 8b e9 48
+0x00007ff97124c4e3:   c7 c3 ff ff ff ff 0f 1f 80 00 00 00 00 48 ff c3
+0x00007ff97124c4f3:   80 3c 0b 00 75 f7 33 f6 c6 44 24 30 01 40 38 35
+0x00007ff97124c503:   7f eb 8b 00 74 17 40 38 35 50 51 8b 00 75 0e 33 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000027e79125f00, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000027e7ac14800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=10064, stack(0x00000083a0900000,0x00000083a0a00000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9717ed587]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff67c370000 - 0x00007ff67c380000 	C:\Program Files\Java\jdk-11\bin\java.exe
+0x00007ff9fc9f0000 - 0x00007ff9fcc07000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff9fbd70000 - 0x00007ff9fbe34000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff9fa270000 - 0x00007ff9fa616000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff9fa090000 - 0x00007ff9fa1a1000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff9e7fa0000 - 0x00007ff9e7fbb000 	C:\Program Files\Java\jdk-11\bin\VCRUNTIME140.dll
+0x00007ff9e2320000 - 0x00007ff9e2339000 	C:\Program Files\Java\jdk-11\bin\jli.dll
+0x00007ff9fbe40000 - 0x00007ff9fbef3000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff9fc7c0000 - 0x00007ff9fc867000 	C:\Windows\System32\msvcrt.dll
+0x00007ff9fc560000 - 0x00007ff9fc608000 	C:\Windows\System32\sechost.dll
+0x00007ff9fa710000 - 0x00007ff9fa738000 	C:\Windows\System32\bcrypt.dll
+0x00007ff9fc430000 - 0x00007ff9fc547000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff9fc610000 - 0x00007ff9fc7be000 	C:\Windows\System32\USER32.dll
+0x00007ff9f9dd0000 - 0x00007ff9f9df6000 	C:\Windows\System32\win32u.dll
+0x00007ff9bf590000 - 0x00007ff9bf823000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100\COMCTL32.dll
+0x00007ff9fbd40000 - 0x00007ff9fbd69000 	C:\Windows\System32\GDI32.dll
+0x00007ff9f9e00000 - 0x00007ff9f9f18000 	C:\Windows\System32\gdi32full.dll
+0x00007ff9f9d30000 - 0x00007ff9f9dca000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff9ec8a0000 - 0x00007ff9ec8aa000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff9fc970000 - 0x00007ff9fc9a1000 	C:\Windows\System32\IMM32.DLL
+0x0000027e793a0000 - 0x0000027e793b4000 	C:\Windows\System32\umppc17807.dll
+0x00007ff9f1a80000 - 0x00007ff9f1a8c000 	C:\Program Files\Java\jdk-11\bin\vcruntime140_1.dll
+0x00007ff9c25a0000 - 0x00007ff9c262e000 	C:\Program Files\Java\jdk-11\bin\msvcp140.dll
+0x00007ff971070000 - 0x00007ff971bdd000 	C:\Program Files\Java\jdk-11\bin\server\jvm.dll
+0x00007ff9fc550000 - 0x00007ff9fc558000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff9ed3c0000 - 0x00007ff9ed3c9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff9fa740000 - 0x00007ff9fa7b1000 	C:\Windows\System32\WS2_32.dll
+0x00007ff9ed2d0000 - 0x00007ff9ed304000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff9f8d30000 - 0x00007ff9f8d48000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff9e9780000 - 0x00007ff9e9790000 	C:\Program Files\Java\jdk-11\bin\verify.dll
+0x00007ff9f7580000 - 0x00007ff9f77b3000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff9fbf00000 - 0x00007ff9fc289000 	C:\Windows\System32\combase.dll
+0x00007ff9fabb0000 - 0x00007ff9fac87000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ff9e6dd0000 - 0x00007ff9e6e02000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff9fa690000 - 0x00007ff9fa70a000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff9e0f90000 - 0x00007ff9e0fb8000 	C:\Program Files\Java\jdk-11\bin\java.dll
+0x00007ff9e7a70000 - 0x00007ff9e7a7a000 	C:\Program Files\Java\jdk-11\bin\jimage.dll
+0x00007ff9df980000 - 0x00007ff9df997000 	C:\Program Files\Java\jdk-11\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100;C:\Program Files\Java\jdk-11\bin\server
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=C:\Program Files\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin\m2.conf -Dmaven.home=C:\Program Files\apache-maven-3.9.6-bin\apache-maven-3.9.6 -Dlibrary.jansi.path=C:\Program Files\apache-maven-3.9.6-bin\apache-maven-3.9.6\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\sonali\eclipse-workspace\BDDCucumberFramework 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher clean
+java_class_path (initial): C:\Program Files\apache-maven-3.9.6-bin\apache-maven-3.9.6\boot\plexus-classworlds-2.7.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 532525568                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 8520409088                                {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-11
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\RSA SecurID Token Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Java\jdk-20\bin;C:\Program Files\Java\jdk-11\bin;C:\Program Files\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin;C:\Program Files\nodejs\;C:\Users\sonali\scoop\apps\nodejs\current\bin;C:\Users\sonali\scoop\apps\nodejs\current;C:\Users\sonali\scoop\shims;C:\Program Files (x86)\RSA SecurID Token Common\;C:\Users\sonali\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-11\bin;C:\Users\sonali\AppData\Roaming\npm
+USERNAME=sonali
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.3085)
+
+CPU:total 8 (initial active 8) 
+
+Memory: 4k page, system-wide physical 32502M (17705M free)
+TotalPageFile size 50934M (AvailPageFile size 33121M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.21+9-LTS-193) for windows-amd64 JRE (11.0.21+9-LTS-193), built on Sep 13 2023 11:04:38 by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "allure": "^0.0.0",
+    "scoop": "^0.0.2"
+  }
+}
